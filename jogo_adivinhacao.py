@@ -14,7 +14,13 @@ while True:
 
     if tentativa == numero_secreto:
         print(f'PARABENS! VOÇÊ ACERTOU EM {chances} tentativa(s) ')
-        break
+        print('-'*30)
+        sair = input('Deseja continuar? [S]im [N]ão: ')
+        if sair == 'n' or sair == 'N':
+             break
+        else:
+             chances = 0
+             continue
 
     elif tentativa < numero_secreto:
          print('O numero secreto e maior, tente novamente ')
